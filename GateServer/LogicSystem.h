@@ -10,7 +10,7 @@ class LogicSystem : public Singleton<LogicSystem>
 {
 	friend class Singleton<LogicSystem>;
 public:	
-	~LogicSystem();
+	~LogicSystem() = default;
 	bool HandleGet(std::string, std::shared_ptr<HttpConnection>);
 	void RegGet(std::string url, HttpHandler handler);
 private:
