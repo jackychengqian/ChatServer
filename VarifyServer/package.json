@@ -1,0 +1,20 @@
+{
+  "name": "varify-server",
+  "version": "1.0.0",
+  "description": "VarifyServer",
+  "main": "server.js",
+  "scripts": { "serve": "node server.js" },
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.2",
+    "@grpc/proto-loader": "^0.7.13",
+    "nodemailer": "^6.9.16",
+    "uuid": "^11.0.3"
+  }
+}
