@@ -46,6 +46,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="README.md" />
+    <Content Include="redis.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="server.js">
       <SubType>Code</SubType>
     </Content>
