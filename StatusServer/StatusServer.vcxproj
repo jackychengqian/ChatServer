@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{533cf77f-cf9e-4766-8295-458898485150}</ProjectGuid>
-    <RootNamespace>GateServer</RootNamespace>
+    <ProjectGuid>{1851d422-be71-4cc5-b1d6-2075017f4765}</ProjectGuid>
+    <RootNamespace>StatusServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -65,16 +65,12 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="PropertySheet.props" />
+    <Import Project="..\GateServer\PropertySheet.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -134,37 +130,28 @@
   <ItemGroup>
     <ClCompile Include="AsioIOServicePool.cpp" />
     <ClCompile Include="ConfigMgr.cpp" />
-    <ClCompile Include="CServer.cpp" />
-    <ClCompile Include="GateServer.cpp" />
-    <ClCompile Include="HttpConnection.cpp" />
-    <ClCompile Include="LogicSystem.cpp" />
     <ClCompile Include="message.grpc.pb.cc" />
     <ClCompile Include="message.pb.cc" />
     <ClCompile Include="MysqlDao.cpp" />
     <ClCompile Include="MysqlMgr.cpp" />
     <ClCompile Include="RedisMgr.cpp" />
-    <ClCompile Include="StatusGrpcClient.cpp" />
-    <ClCompile Include="VerifyGrpcClient.cpp" />
+    <ClCompile Include="StatusServer.cpp" />
+    <ClCompile Include="StatusServiceImpl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsioIOServicePool.h" />
     <ClInclude Include="ConfigMgr.h" />
-    <ClInclude Include="CServer.h" />
     <ClInclude Include="const.h" />
-    <ClInclude Include="HttpConnection.h" />
-    <ClInclude Include="LogicSystem.h" />
     <ClInclude Include="message.grpc.pb.h" />
     <ClInclude Include="message.pb.h" />
     <ClInclude Include="MysqlDao.h" />
     <ClInclude Include="MysqlMgr.h" />
     <ClInclude Include="RedisMgr.h" />
     <ClInclude Include="Singleton.h" />
-    <ClInclude Include="StatusGrpcClient.h" />
-    <ClInclude Include="VerifyGrpcClient.h" />
+    <ClInclude Include="StatusServiceImpl.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.ini" />
-    <None Include="message.proto" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
